@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useState} from "react";
 import { getMenuStyles, headerVariants } from "../../utils/motion";
 import css from "./Header.module.scss";
 import { motion } from "framer-motion";
@@ -7,7 +7,8 @@ import useHeaderShadow from "../../hooks/useHeaderShadow";
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const headerShadow = useHeaderShadow()
-
+  
+  
   return (
     <motion.div
       initial="hidden"
