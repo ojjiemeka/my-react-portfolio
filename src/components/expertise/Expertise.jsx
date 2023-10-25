@@ -11,8 +11,9 @@ function Expertise() {
       variants={staggerContainer}
       viewport={{ once: false, amount: 0.25 }}
       className={css.wrapper}
-      
       >
+        <a className="anchor" id="expertise"></a>
+
       <div
         className={`paddings yPaddings flexCenter innerWidth ${css.container}`}>
         <div className={`${css.leftSide}`}>

@@ -200,7 +200,7 @@ export const listItem = {
  * `menuOpened` is true. If the condition is false, the function will not return anything.
  */
 export const getMenuStyles = (menuOpened) => {
-  if (document.documentElement.clientWidth <= 640) {
+  if (document.documentElement.clientWidth <= 1024) {
     // console.log("outside of sidebar reached")
     return { right: !menuOpened && "-100%" };
   }
