@@ -1,5 +1,13 @@
 @import '../../styles/contants.scss';
 
+p{
+
+}
+
+h1{
+    // font-weight: 400;
+}
+
 .wrapper {
     .container {
         flex-direction: column;
@@ -14,7 +22,7 @@
             .exp {
                 width: 100%;
                 justify-content: space-between;
-                line-height: 40px;
+                line-height: 30px;
                 align-items: flex-start;
 
                 >div {
@@ -23,6 +31,10 @@
 
                 .role {
                     margin-left: 2rem;
+
+                    h1{
+                        font-size: 20px;
+                    }
                 }
             }
 
@@ -63,4 +75,9 @@
         }
 
     }
+}
+
+.role_heading{
+    font-weight: 500 !important;
+    font-size: 25px;
 }

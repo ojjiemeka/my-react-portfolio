@@ -22,7 +22,7 @@ const Work = () => {
               return (
                 <motion.div variants={textVariant2} key={i} className={`flexCenter ${css.exp}`}>
                   <div className={css.post}>
-                    <h1>{exp.place}</h1>
+                    <h1 className={css.role_heading}>{exp.place}</h1>
                     <p>{exp.tenure}</p>
                   </div>
                   <div className={css.role}>

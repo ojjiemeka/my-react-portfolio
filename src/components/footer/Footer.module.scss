@@ -3,7 +3,7 @@
 .wrapper{
     background: white;
     .container{
-        gap: 2rem;
+        gap: 4rem;
         @media (max-width: $sm) {
             flex-direction: column;
             gap: 2rem;
@@ -52,4 +52,19 @@
             }
         }
     }
+}
+
+.cusSpan{
+    /** TEXT GRADIENT */
+    color: #e7a5bd;
+    background-image: -webkit-linear-gradient(
+      0deg,
+      #e7a5bd 17%,
+      #d2c9f6 66%,
+      #7c4227 84%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
 }
