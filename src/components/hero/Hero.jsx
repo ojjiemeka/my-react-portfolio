@@ -1,7 +1,7 @@
 import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
 import css from "./Hero.module.scss";
 import certificate from "/certificate.png";
-import person from "/person.png";
+import person from "/emmy.png";
 import { motion } from "framer-motion";
 
 function Hero() {
@@ -20,7 +20,8 @@ function Hero() {
           <motion.span
             variants={fadeIn("right", "tween", 0.2, 1)}
             className="primaryText">
-            Hey There, <br /> I&apos;m Emeka
+            Hey There, <br /> 
+            <span className="fs-1">I&apos;m Emeka</span>
           </motion.span>
           <motion.span 
           variants={fadeIn("left", "tween", 0.4, 1)}
@@ -37,7 +38,7 @@ function Hero() {
         className={css.person}>
           <motion.img 
           variants={slideIn("up", "tween", 0.5, 1)}
-          src={person} alt="" sizes="" srcSet="" />
+          src={person} alt="" className="w-50"/>
         </motion.div>
 
         {/* email */}
@@ -48,7 +49,7 @@ function Hero() {
         {/* lower elements */}
         <div className={`${css.lowerElements}`}>
           <div className={`${css.experience}`}>
-            <div className="primaryText">10</div>
+            <div className="primaryText">4</div>
             <div className="secondaryText">
               <div>Years</div>
               <div>Experience</div>
@@ -57,7 +58,7 @@ function Hero() {
           <div className={`${css.certificate}`}>
             <img src={certificate} alt="certificate" srcSet={certificate} />
             <span>CERTIFIED PROFESSIONAL</span>
-            <span>UI/UX DESIGNER</span>
+            <span>FRONT END DEVELOPER</span>
           </div>
         </div>
       </motion.div>

@@ -1,4 +1,6 @@
+import { useState } from "react";
 import css from "./Input.module.scss";
+// import axios from "axios";
 
 function Input() {
   const inputs = [
@@ -26,33 +28,76 @@ function Input() {
     },
   ];
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const onChangeHandler = (e) => {
+    setFormData(() => ({
+      ...formData, [e.target.name]: e.target.value
+    }));
+    // console.log(setFormData);
+  };
+
+  const submitForm = (e) => {
+    e.preventDefault();
+
+    // Now, formData contains the form data
+    console.log(formData);
+
+    // If you want to make an HTTP request with Axios, you can uncomment and use the following code:
+
+    // let url = "https://triiaconstructions.homes/api/forms";
+
+    // axios
+    //   .post(url, formData) // Pass the URL as the first argument and formData as the second argument
+    //   .then((response) => {
+    //     console.log(response);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+  };
+
+
   return (
-    <form>
+    <form onSubmit={submitForm}>
         <div className="form-group mb-3">
           {inputs.map((input) => (
             <div key={input.id}>
               {input.type === "textarea" ? (
                 <>
-                <label className="mb-2" htmlFor="">
+                <label className="mb-2">
                 {input.label}
               </label>
-                <textarea {...input} required />
+                <textarea {...input}
+                  onChange={onChangeHandler}
+                  required 
+                  />
                 </>
               ) : (
                 <>
-                  <label className="mb-2" htmlFor="">
+                  <label className="mb-2">
                     {input.label}
                   </label>
-                  <input {...input} type={input.type} required />
+                  <input 
+                  {...input} 
+                  type={input.type}
+                  onChange={onChangeHandler}
+                    required 
+                    />
                 </>
               )}
             </div>
           ))}
         </div>
-        <button type="submit" className={`btn ${css.cusBtn}`}>
+        <button className={`btn ${css.cusBtn}`}>
           Submit
         </button>
       </form>
+    
   );
 }
 

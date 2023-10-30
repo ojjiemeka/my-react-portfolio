@@ -15,7 +15,6 @@ const Footer = () => {
       <motion.div
         variants={footerVariants}
         className={`innerWidth yPaddings flexCenter ${css.container}`}>
-               
         <div className={css.left}>
           <span className={` t-1`}>
             Let&apos;s make something <br />
@@ -26,24 +25,39 @@ const Footer = () => {
           </span>
         </div>
 
-       <div className="w-100">
-       <Input/> 
-       </div>
-
-
-        {/* <div className={css.right}>
-          <div className={css.info}>
-            <span className="secondaryText">Information</span>
-            <p>145 New York, FL 5467, USA</p>
-          </div>
-          <ul className={css.menu}>
-            <li>Services</li>
-            <li>Works</li>
-            <li>Notes</li>
-            <li>Experience</li>
-          </ul>
-        </div> */}
+        <div className="w-100">
+          <Input />
+        </div>
       </motion.div>
+
+      <div className={css.right}>
+        {/* <div className={css.info}>
+            <p>145 New York, FL 5467, USA</p>
+          </div> */}
+        <ul className={`d-flex justify-content-evenly ${css.menu}`}>
+          <li>
+            <a href="">
+              <i className="bx bx-sm bxl-whatsapp"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <i className="bx bx-sm bxl-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i className="bx bx-sm bxl-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i className="bx bx-sm bxl-twitter"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </motion.section>
   );
 };

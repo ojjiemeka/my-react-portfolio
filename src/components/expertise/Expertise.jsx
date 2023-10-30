@@ -1,5 +1,5 @@
-import { helpText, projectExperience } from "../../utils/data";
-import { fadeIn, staggerContainer, textVariant } from "../../utils/motion";
+import { helpText } from "../../utils/data";
+import { staggerContainer, textVariant } from "../../utils/motion";
 import css from "./Expertise.module.scss";
 import { motion } from "framer-motion";
 
@@ -16,7 +16,7 @@ function Expertise() {
 
       <div
         className={`paddings yPaddings flexCenter innerWidth ${css.container}`}>
-        <div className={`${css.leftSide}`}>
+        {/* <div className={`${css.leftSide}`}>
           {projectExperience.map((exp, i) => {
             return (
               <>
@@ -38,13 +38,13 @@ function Expertise() {
               </>
             );
           })}
-        </div>
+        </div> */}
         <motion.div
         initial="hidden"
         whileInView="show"
         variants={textVariant(0.5)}
         viewport={{ once: false, amount: 0.25 }}
-         className={css.rightSide}>
+         className={`text-center ${css.rightSide}`}>
           <span className={css.p_Text}> What i do?</span>
           {helpText.map((paragraph, i) => {
             return (
@@ -56,13 +56,13 @@ function Expertise() {
             );
           })}
 
-          <div className={`flexCenter ${css.stats}`}>
+          <div className={`d-flex justify-content-evenly ${css.stats}`}>
             <div className={`flexCenter ${css.stat}`}>
-              <span className={css.p_Text}>285+</span>
+              <span className={css.p_Text}>10+</span>
               <span className={css.secondaryText}>Projects Completed</span>
             </div>
             <div className={`flexCenter ${css.stat}`}>
-              <span className={css.p_Text}>190+</span>
+              <span className={css.p_Text}>20+</span>
               <span className={css.secondaryText}>Happy Clients</span>
             </div>
           </div>

@@ -20,7 +20,7 @@ const People = () => {
 
 
         <div className={`flexCenter ${css.heading}`}>
-          <span className="primaryText">People talk about us</span>
+          <span className="primaryText">People talking about me</span>
           <p style={{ marginTop: "2rem" }}>
             I got a job that was in accordance with the salary and field of work
           </p>
@@ -29,7 +29,7 @@ const People = () => {
 
 
 
-        <div className={`yPaddings ${css.comments}`}>
+        <div className={` ${css.comments}`}>
           {/* to use slider , we have to inlcude css in index.html head */}
           <Slider {...sliderSettings} className={css.slider}>
             {comments.map((comment, i) => {

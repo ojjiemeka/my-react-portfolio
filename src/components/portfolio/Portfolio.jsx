@@ -1,6 +1,7 @@
 import { fadeIn, staggerChildren, textVariant, } from "../../utils/motion";
 import css from "./Portfolio.module.scss";
 import { motion } from "framer-motion";
+// import work1 from './logistic-website.png';
 
 const Portfolio = () => {
   return (
@@ -26,9 +27,18 @@ const Portfolio = () => {
 
 
         <div className={`flexCenter ${css.showCase}`}>
-            <motion.img variants={fadeIn("up", "tween", .5, .6)} src="./showCase1.png" alt="project" />
-            <motion.img variants={fadeIn("up", "tween", .7, .6)} src="./showCase2.png" alt="project" />
-            <motion.img variants={fadeIn("up", "tween", .9, .6)} src="./showCase3.png" alt="project" />
+          <motion.a href="https://ship2xpress.netlify.app/" variants={fadeIn("up", "tween", .5, .6)} className="d-grid text-center">
+            <img src="./logistic-website.png" alt="project" />
+            <span className="mt-2">Logistics Website</span>
+          </motion.a>
+          <motion.a href="https://ojjiemeka.github.io/portfolio/" variants={fadeIn("up", "tween", .7, .6)} className="d-grid text-center">
+            <img src="./portfolio1.png" alt="project" />
+            <span className="mt-2">Sample Portfolio Website</span>
+          </motion.a>
+          <motion.a href="##" variants={fadeIn("up", "tween", .9, .6)} className="d-grid text-center">
+            <img src="./nft-website.png" alt="project" />
+            <span className="mt-2">NFT website</span>
+          </motion.a>
         </div>
       </div>
     </motion.section>

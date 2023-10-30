@@ -13,7 +13,7 @@ function App() {
     <Header/>
     <Hero/>
     <Expertise/>
-    <Work/>
+    {/* <Work/> */}
     <Portfolio/>
     <People/>
     <Footer/>

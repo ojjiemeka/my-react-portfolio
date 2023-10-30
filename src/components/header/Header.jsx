@@ -39,7 +39,7 @@ const Header = () => {
           <li><a href="#people">Testimonials</a></li>
           <li><a href="#contact">Contact</a></li>
           <li className={`${css.phone}`}>
-            <a href="tel:+1234567890">
+            <a href="tel:+2348139045472">
             <i className='bx bx-sm bx-phone-call'></i>
             </a>
           </li>

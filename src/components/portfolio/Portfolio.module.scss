@@ -24,8 +24,14 @@
             gap: 1.5rem;
             justify-content: space-around;
             flex-wrap: wrap;
-            >img{
+            >a{
+                text-decoration: none;
+                color: #0D2F3F;
+                font-weight: 500;
+            }
+            >a>img{
 
+                
                 @media (max-width: $sm) {
                     width: 100%;
                 }
